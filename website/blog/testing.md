@@ -53,8 +53,8 @@ import (
     "context"
     "testing"
 
-    "github.com/ServiceWeaver/weaver"
-    "github.com/ServiceWeaver/weaver/weavertest"
+    "github.com/thunur/weaver"
+    "github.com/thunur/weaver/weavertest"
 )
 
 func TestAdd(t *testing.T) {
@@ -128,7 +128,7 @@ import (
     "github.com/ServiceWeaver/onlineboutique/paymentservice"
     "github.com/ServiceWeaver/onlineboutique/productcatalogservice"
     "github.com/ServiceWeaver/onlineboutique/shippingservice"
-    "github.com/ServiceWeaver/weaver/weavertest"
+    "github.com/thunur/weaver/weavertest"
 )
 
 func TestPurchase(t *testing.T) {
@@ -551,30 +551,30 @@ go test -v
     bank_test.go:103: sequenceDiagram
             participant op1 as Op 1
             participant op2 as Op 2
-            participant github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0 as bank.Bank 0
-            participant github.com/ServiceWeaver/weaver/sim/internal/bank/Store0 as bank.Store 0
+            participant github.com/thunur/weaver/sim/internal/bank/Bank0 as bank.Bank 0
+            participant github.com/thunur/weaver/sim/internal/bank/Store0 as bank.Store 0
             note right of op1: [1:1] Withdraw(alice, 58)
-            op1->>github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0: [1:2] bank.Bank.Withdraw(alice, 58)
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Store0: [1:3] bank.Store.Get(alice)
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Store0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0: [1:3] return 100, <nil>
+            op1->>github.com/thunur/weaver/sim/internal/bank/Bank0: [1:2] bank.Bank.Withdraw(alice, 58)
+            github.com/thunur/weaver/sim/internal/bank/Bank0->>github.com/thunur/weaver/sim/internal/bank/Store0: [1:3] bank.Store.Get(alice)
+            github.com/thunur/weaver/sim/internal/bank/Store0->>github.com/thunur/weaver/sim/internal/bank/Bank0: [1:3] return 100, <nil>
             note right of op2: [2:5] Withdraw(alice, 45)
-            op2->>github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0: [2:6] bank.Bank.Withdraw(alice, 45)
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Store0: [2:7] bank.Store.Get(alice)
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Store0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0: [2:7] return 100, <nil>
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Store0: [1:4] bank.Store.Add(alice, -58)
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Store0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0: [1:4] return 42, <nil>
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0->>op1: [1:2] return 42, <nil>
+            op2->>github.com/thunur/weaver/sim/internal/bank/Bank0: [2:6] bank.Bank.Withdraw(alice, 45)
+            github.com/thunur/weaver/sim/internal/bank/Bank0->>github.com/thunur/weaver/sim/internal/bank/Store0: [2:7] bank.Store.Get(alice)
+            github.com/thunur/weaver/sim/internal/bank/Store0->>github.com/thunur/weaver/sim/internal/bank/Bank0: [2:7] return 100, <nil>
+            github.com/thunur/weaver/sim/internal/bank/Bank0->>github.com/thunur/weaver/sim/internal/bank/Store0: [1:4] bank.Store.Add(alice, -58)
+            github.com/thunur/weaver/sim/internal/bank/Store0->>github.com/thunur/weaver/sim/internal/bank/Bank0: [1:4] return 42, <nil>
+            github.com/thunur/weaver/sim/internal/bank/Bank0->>op1: [1:2] return 42, <nil>
             note right of op1: [1:1] return <nil>
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Store0: [2:8] bank.Store.Add(alice, -45)
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Store0->>github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0: [2:8] return -3, <nil>
-            github.com/ServiceWeaver/weaver/sim/internal/bank/Bank0->>op2: [2:6] return -3, <nil>
+            github.com/thunur/weaver/sim/internal/bank/Bank0->>github.com/thunur/weaver/sim/internal/bank/Store0: [2:8] bank.Store.Add(alice, -45)
+            github.com/thunur/weaver/sim/internal/bank/Store0->>github.com/thunur/weaver/sim/internal/bank/Bank0: [2:8] return -3, <nil>
+            github.com/thunur/weaver/sim/internal/bank/Bank0->>op2: [2:6] return -3, <nil>
             note right of op2: [2:5] return user alice has negative balance -3
 
     bank_test.go:104: Unexpected success
 --- FAIL: TestBank (0.99s)
 FAIL
 exit status 1
-FAIL    github.com/ServiceWeaver/weaver/sim/internal/bank       1.015s
+FAIL    github.com/thunur/weaver/sim/internal/bank       1.015s
 ```
 
 The simulator writes the failing execution to a file
@@ -601,7 +601,7 @@ need to be performed transactionally. This type of bug&mdash;the type that only 
 a very specific interleaving of a very specific set of requests&mdash;is hard to
 find and diagnose without deterministic simulation.
 
-[Workload]: https://pkg.go.dev/github.com/ServiceWeaver/weaver@v0.23.0-beta/sim#Workload
+[Workload]: https://pkg.go.dev/github.com/thunur/weaver@v0.23.0-beta/sim#Workload
 [blog]: ../blog/
 [components]: ../docs.html#components
 [deterministic_simulation]: https://asatarin.github.io/testing-distributed-systems/#deterministic-simulation
@@ -615,7 +615,7 @@ find and diagnose without deterministic simulation.
 [onlineboutique_demo]: https://cymbal-shops.retail.cymbal.dev/
 [onlineboutique_local]: https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/docs/development-guide.md#option-2---local-cluster
 [protocol_bugs]: https://github.com/dranov/protocol-bugs-list
-[sim]: https://pkg.go.dev/github.com/ServiceWeaver/weaver@v0.23.0-beta/sim
+[sim]: https://pkg.go.dev/github.com/thunur/weaver@v0.23.0-beta/sim
 [sw_onlineboutique]: https://github.com/ServiceWeaver/onlineboutique
 [tutorial]: ../docs.html#step-by-step-tutorial
 [unit_testing]: ../docs.html#testing

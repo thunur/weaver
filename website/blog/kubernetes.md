@@ -149,6 +149,6 @@ new deployers that can benefit the entire Service Weaver community.
 [kubectl]: https://kubernetes.io/docs/reference/kubectl/
 [kube_doc]: https://serviceweaver.dev/docs.html#kube
 [kube_doc_telemetry]: https://serviceweaver.dev/docs.html#kube-telemetry
-[kube_telemetry_api]: https://github.com/ServiceWeaver/weaver-kube/blob/main/tool/tool.go
+[kube_telemetry_api]: https://github.com/thunur/weaver-kube/blob/main/tool/tool.go
 [minikube]: https://minikube.sigs.k8s.io/docs/
 [prometheus]: https://prometheus.io

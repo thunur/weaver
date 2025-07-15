@@ -176,5 +176,5 @@ check).
 [jepsen]: https://jepsen.io/
 [minimization]: https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-scott.pdf
 [protocol_bugs]: https://github.com/dranov/protocol-bugs-list
-[sim_demo]: https://github.com/ServiceWeaver/weaver/tree/sim/internal/sim
+[sim_demo]: https://github.com/thunur/weaver/tree/sim/internal/sim
 [testing_distributed_systems]: https://asatarin.github.io/testing-distributed-systems/

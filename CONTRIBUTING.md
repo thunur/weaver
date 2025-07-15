@@ -132,7 +132,7 @@ Weaver.
     of the `upstream` repository. The reviewer may do this without
     being asked.
 
-    Select the `Squash and merge` option on https://github.com/ServiceWeaver/weaver
+    Select the `Squash and merge` option on https://github.com/thunur/weaver
     or use the command line instructions found on that page. Edit the commit message
     as appropriate for the squashed commit.
 
@@ -173,8 +173,8 @@ valuable:
 
 [cla]: https://cla.developers.google.com/about
 [github_help]: https://help.github.com/articles/about-pull-requests/
-[github_weaver]: https://github.com/ServiceWeaver/weaver
+[github_weaver]: https://github.com/thunur/weaver
 [google_group]: https://groups.google.com/g/serviceweaver
-[issues]: https://github.com/ServiceWeaver/weaver/issues
-[new_issue]: https://github.com/ServiceWeaver/weaver/issues/new
+[issues]: https://github.com/thunur/weaver/issues
+[new_issue]: https://github.com/thunur/weaver/issues/new
 [workflow]: https://www.google.com/search?q=github+fork+and+branch+workflow

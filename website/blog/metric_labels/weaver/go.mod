@@ -2,7 +2,7 @@ module weaver
 
 go 1.21
 
-require github.com/ServiceWeaver/weaver v0.18.0
+require github.com/thunur/weaver v0.18.0
 
 require (
 	github.com/google/uuid v1.3.0 // indirect

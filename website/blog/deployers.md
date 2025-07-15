@@ -208,7 +208,7 @@ Now, we implement the `EnvelopeHandler` methods, which handle the weavelet
 initiated communication to the deployer.
 
 <div class="note">
-For each <code>EnvelopeHandler</code> method, we also summarize how <a href="https://github.com/ServiceWeaver/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a> and <a href="https://github.com/ServiceWeaver/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code><a/> implement the method to give you a better sense for how these methods are implemented by more advanced deployers.
+For each <code>EnvelopeHandler</code> method, we also summarize how <a href="https://github.com/thunur/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a> and <a href="https://github.com/thunur/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code><a/> implement the method to give you a better sense for how these methods are implemented by more advanced deployers.
 </div>
 
 ### Components
@@ -257,7 +257,7 @@ func (h *handler) ActivateComponent(_ context.Context, req *protos.ActivateCompo
 ```
 
 <div class="note">
-<a href="https://github.com/ServiceWeaver/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a>, like our deployer, spawns weavelets in subprocesses. <a href="https://github.com/ServiceWeaver/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code></a> spawns weavelets in <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Kubernetes deployments</a>.
+<a href="https://github.com/thunur/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a>, like our deployer, spawns weavelets in subprocesses. <a href="https://github.com/thunur/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code></a> spawns weavelets in <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Kubernetes deployments</a>.
 </div>
 
 ### Listeners
@@ -290,7 +290,7 @@ func (h *handler) ExportListener(_ context.Context, req *protos.ExportListenerRe
 ```
 
 <div class="note">
-<a href="https://github.com/ServiceWeaver/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a>'s implementation of <code>GetListenerAddress</code> always returns <code>"localhost:0"</code>. Its <code>ExportListener</code> runs a local HTTP proxy on the address specified in the <code>LocalAddress</code> field of the <a href="https://pkg.go.dev/github.com/ServiceWeaver/weaver#ListenerOptions">ListenerOptions</a> passed to <a href="https://pkg.go.dev/github.com/ServiceWeaver/weaver#Instance">Listener</a>. This proxy balances traffic across the addresses of the listeners reported to <code>ExportListener</code>. <a href="https://github.com/ServiceWeaver/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code></a> implements listeners by configuring load balancers in Google Cloud.
+<a href="https://github.com/thunur/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a>'s implementation of <code>GetListenerAddress</code> always returns <code>"localhost:0"</code>. Its <code>ExportListener</code> runs a local HTTP proxy on the address specified in the <code>LocalAddress</code> field of the <a href="https://pkg.go.dev/github.com/thunur/weaver#ListenerOptions">ListenerOptions</a> passed to <a href="https://pkg.go.dev/github.com/thunur/weaver#Instance">Listener</a>. This proxy balances traffic across the addresses of the listeners reported to <code>ExportListener</code>. <a href="https://github.com/thunur/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code></a> implements listeners by configuring load balancers in Google Cloud.
 </div>
 
 ### Telemetry
@@ -318,7 +318,7 @@ func (h *handler) HandleTraceSpans(context.Context, *protos.TraceSpans) error {
 ```
 
 <div class="note">
-<a href="https://github.com/ServiceWeaver/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a> writes logs and traces to files. <a href="https://github.com/ServiceWeaver/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code></a> exports logs and traces to <a href="https://cloud.google.com/logging">Cloud Logging</a> and <a href="https://cloud.google.com/trace">Cloud Trace</a>.
+<a href="https://github.com/thunur/weaver/blob/main/internal/tool/multi/deployer.go"><code>weaver multi</code></a> writes logs and traces to files. <a href="https://github.com/thunur/weaver-gke/blob/main/internal/babysitter/babysitter.go"><code>weaver gke</code></a> exports logs and traces to <a href="https://cloud.google.com/logging">Cloud Logging</a> and <a href="https://cloud.google.com/trace">Cloud Trace</a>.
 </div>
 
 ### Security
@@ -415,26 +415,26 @@ and [`weaver gke`][weaver_gke_github] deployers for reference.
   `weaver multi logs`, for example, can be used to inspect applications deployed
   with `weaver multi deploy`.
 
-[AppConfig]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/protos#AppConfig
-[Assignment]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/protos#Assignment
-[Envelope]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/envelope#Envelope
-[EnvelopeHandler]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/envelope#EnvelopeHandler
-[WeaveletArgs]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/protos#WeaveletArgs
-[GetHealth]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/envelope#Envelope.GetHealth
-[GetLoad]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/envelope#Envelope.GetLoad
-[NewEnvelope]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/envelope#NewEnvelope
-[ParseConfig]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime#ParseConfig
-[Run]: https://pkg.go.dev/github.com/ServiceWeaver/weaver#Run
-[WeaveletArgs]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/runtime/protos#WeaveletArgs
+[AppConfig]: https://pkg.go.dev/github.com/thunur/weaver/runtime/protos#AppConfig
+[Assignment]: https://pkg.go.dev/github.com/thunur/weaver/runtime/protos#Assignment
+[Envelope]: https://pkg.go.dev/github.com/thunur/weaver/runtime/envelope#Envelope
+[EnvelopeHandler]: https://pkg.go.dev/github.com/thunur/weaver/runtime/envelope#EnvelopeHandler
+[WeaveletArgs]: https://pkg.go.dev/github.com/thunur/weaver/runtime/protos#WeaveletArgs
+[GetHealth]: https://pkg.go.dev/github.com/thunur/weaver/runtime/envelope#Envelope.GetHealth
+[GetLoad]: https://pkg.go.dev/github.com/thunur/weaver/runtime/envelope#Envelope.GetLoad
+[NewEnvelope]: https://pkg.go.dev/github.com/thunur/weaver/runtime/envelope#NewEnvelope
+[ParseConfig]: https://pkg.go.dev/github.com/thunur/weaver/runtime#ParseConfig
+[Run]: https://pkg.go.dev/github.com/thunur/weaver#Run
+[WeaveletArgs]: https://pkg.go.dev/github.com/thunur/weaver/runtime/protos#WeaveletArgs
 [components]: ../docs.html#components
 [config]: ../docs.html#components-config
 [gke]: ../docs.html#gke
 [mtls]: https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/
-[multi_deployer]: https://github.com/ServiceWeaver/weaver/blob/main/website/blog/deployers/multi/main.go
+[multi_deployer]: https://github.com/thunur/weaver/blob/main/website/blog/deployers/multi/main.go
 [multiprocess]: ../docs.html#multiprocess
 [routing]: ../docs.html#routing
 [singleprocess]: ../docs.html#single-process
 [tutorial]: ../docs.html#step-by-step-tutorial
 [versioning]: ../docs.html#versioning
-[weaver_github]: https://github.com/ServiceWeaver/weaver/blob/main/internal/tool/multi/deployer.go
-[weaver_gke_github]: https://github.com/ServiceWeaver/weaver-gke/blob/main/internal/babysitter/babysitter.go
+[weaver_github]: https://github.com/thunur/weaver/blob/main/internal/tool/multi/deployer.go
+[weaver_gke_github]: https://github.com/thunur/weaver-gke/blob/main/internal/babysitter/babysitter.go

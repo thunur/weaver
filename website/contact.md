@@ -26,5 +26,5 @@
 
 [sw_group]: https://groups.google.com/g/serviceweaver
 [sw_discord]: https://discord.gg/FzbQ3SM8R5
-[issue]: https://github.com/ServiceWeaver/weaver/issues
-[contrib_guide]: https://github.com/ServiceWeaver/weaver/blob/main/CONTRIBUTING.md
+[issue]: https://github.com/thunur/weaver/issues
+[contrib_guide]: https://github.com/thunur/weaver/blob/main/CONTRIBUTING.md

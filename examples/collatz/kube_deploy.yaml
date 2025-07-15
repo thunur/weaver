@@ -34,9 +34,9 @@ listeners:
 #groups:
 #- name: colocated
 #  components:
-#  - github.com/ServiceWeaver/weaver/Main
-#  - github.com/ServiceWeaver/weaver/examples/collatz/Even
-#  - github.com/ServiceWeaver/weaver/examples/collatz/Odd
+#  - github.com/thunur/weaver/Main
+#  - github.com/thunur/weaver/examples/collatz/Even
+#  - github.com/thunur/weaver/examples/collatz/Odd
 #
 # E.g., to specify the resource requirements for the pods, you can set:
 #resourceSpec:

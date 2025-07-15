@@ -1,4 +1,4 @@
-# Service Weaver [![Go Reference](https://pkg.go.dev/badge/github.com/ServiceWeaver/weaver.svg)](https://pkg.go.dev/github.com/ServiceWeaver/weaver)
+# Service Weaver [![Go Reference](https://pkg.go.dev/badge/github.com/thunur/weaver.svg)](https://pkg.go.dev/github.com/thunur/weaver)
 
 ## 🚨 Important Announcement
 

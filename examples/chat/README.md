@@ -6,15 +6,15 @@ An example chat application.
 %%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
 graph TD
     %% Nodes.
-    github.com/ServiceWeaver/weaver/Main(weaver.Main)
-    github.com/ServiceWeaver/weaver/examples/chat/ImageScaler(chat.ImageScaler)
-    github.com/ServiceWeaver/weaver/examples/chat/LocalCache(chat.LocalCache)
-    github.com/ServiceWeaver/weaver/examples/chat/SQLStore(chat.SQLStore)
+    github.com/thunur/weaver/Main(weaver.Main)
+    github.com/thunur/weaver/examples/chat/ImageScaler(chat.ImageScaler)
+    github.com/thunur/weaver/examples/chat/LocalCache(chat.LocalCache)
+    github.com/thunur/weaver/examples/chat/SQLStore(chat.SQLStore)
 
     %% Edges.
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/chat/ImageScaler
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/chat/LocalCache
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/chat/SQLStore
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/chat/ImageScaler
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/chat/LocalCache
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/chat/SQLStore
 ```
 
 ## How to Run Locally
@@ -69,7 +69,7 @@ instance. If you're using `mysql.yaml`, then you should update the `SQLStore`
 section of `weaver.toml` to have the following contents:
 
 ```toml
-["github.com/ServiceWeaver/weaver/examples/chat/SQLStore"]
+["github.com/thunur/weaver/examples/chat/SQLStore"]
 db_driver = "mysql"
 db_uri = "root:password@tcp(mysql:3306)/chat"
 ```

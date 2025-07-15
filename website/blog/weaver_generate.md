@@ -381,7 +381,7 @@ easier to understand why your code doesn't build:
 
 ```txt
 $ go build .
-# github.com/ServiceWeaver/weaver/examples/calculator
+# github.com/thunur/weaver/examples/calculator
 ./weaver_gen.go:74:33: cannot use (*calc)(nil) (value of type *calc) as
 RoutedBy[router] value in variable declaration: *calc does not implement
 RoutedBy[router] (wrong type for method routedBy)
@@ -400,8 +400,8 @@ code. You may update to the latest version of Service Weaver but forget to
 re-run `weaver generate`.
 
 ```shell
-$ go get github.com/ServiceWeaver/weaver@latest
-$ go install github.com/ServiceWeaver/weaver/cmd/weaver@latest
+$ go get github.com/thunur/weaver@latest
+$ go install github.com/thunur/weaver/cmd/weaver@latest
 $ go build .
 # Oops! Should have run "weaver generate" first.
 ```
@@ -463,19 +463,19 @@ var _ codegen.LatestVersion = codegen.Version[[0][42]struct{}](`
 
 ERROR: You generated this file with 'weaver generate' v0.42.0 (codegen
 version v0.42.0). The generated code is incompatible with the version of the
-github.com/ServiceWeaver/weaver module that you're using. The weaver module
+github.com/thunur/weaver module that you're using. The weaver module
 version can be found in your go.mod file or by running the following command.
 
-    go list -m github.com/ServiceWeaver/weaver
+    go list -m github.com/thunur/weaver
 
 We recommend updating the weaver module and the 'weaver generate' command by
 running the following.
 
-    go get github.com/ServiceWeaver/weaver@latest
-    go install github.com/ServiceWeaver/weaver/cmd/weaver@latest
+    go get github.com/thunur/weaver@latest
+    go install github.com/thunur/weaver/cmd/weaver@latest
 
 Then, re-run 'weaver generate' and re-build your code. If the problem persists,
-please file an issue at https://github.com/ServiceWeaver/weaver/issues.
+please file an issue at https://github.com/thunur/weaver/issues.
 
 `)
 ```
@@ -488,12 +488,12 @@ reading about [how Service Weaver uses generics to implement strongly typed
 metric labels][metric_labels]. If you'd like to learn more about Service Weaver,
 we recommend you read [the documentation][docs].
 
-[codegen_versions]: https://pkg.go.dev/github.com/ServiceWeaver/weaver@v0.18.0/runtime/version#pkg-constants
+[codegen_versions]: https://pkg.go.dev/github.com/thunur/weaver@v0.18.0/runtime/version#pkg-constants
 [components]: ..//docs.html#step-by-step-tutorial-components
 [docs]: ../docs.html
 [interface_checks]: https://stackoverflow.com/a/27804417
 [metric_labels]: ./metric_labels.html
 [phantoms]: https://wiki.haskell.org/Phantom_type
-[releases]: https://github.com/ServiceWeaver/weaver/releases
+[releases]: https://github.com/thunur/weaver/releases
 [routing]: ..//docs.html#routing
 [serializability]: ..//docs.html#serializable-types

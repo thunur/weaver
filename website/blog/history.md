@@ -285,7 +285,7 @@ type impl struct {
 
 We [open sourced][release] Service Weaver! 🎉
 
-<h2 id="11">April 25, 2023: <a href="https://github.com/ServiceWeaver/weaver/commit/6b0e0d045b05153573ddd17e9eb0d44b9e97adda">Replace weaver.Init With weaver.Run</a></h2>
+<h2 id="11">April 25, 2023: <a href="https://github.com/thunur/weaver/commit/6b0e0d045b05153573ddd17e9eb0d44b9e97adda">Replace weaver.Init With weaver.Run</a></h2>
 
 Every Service Weaver application had a main component, the one returned by
 `weaver.Init`. But unlike every other component, the main component was
@@ -325,7 +325,7 @@ component, indicated by its embedded `weaver.Implements[weaver.Main]`.
 type Main interface {}
 ```
 
-<h2 id="12">April 26, 2023: <a href="https://github.com/ServiceWeaver/weaver/commit/82fa0ffb5900b2d6be8bc39d33e2f83a13714c85">Replace weaver.Get With weaver.Ref</a></h2>
+<h2 id="12">April 26, 2023: <a href="https://github.com/thunur/weaver/commit/82fa0ffb5900b2d6be8bc39d33e2f83a13714c85">Replace weaver.Get With weaver.Ref</a></h2>
 
 At this point, any component could call methods on any other component by
 calling `weaver.Get[T]`. This had two downsides:
@@ -367,7 +367,7 @@ extracts and visualizes this call graph. Moreover, at runtime, we use
 [mTLS][mtls] to ensure that components only communicate with the components to
 which they have references.
 
-<h2 id="13">May 30, 2023: <a href="https://github.com/ServiceWeaver/weaver/commit/570d1ee2dfda2f245e34d9b97ffbd921ba4cd7f2">Introduce Main Method</a></h2>
+<h2 id="13">May 30, 2023: <a href="https://github.com/thunur/weaver/commit/570d1ee2dfda2f245e34d9b97ffbd921ba4cd7f2">Introduce Main Method</a></h2>
 
 We started to think that the signature of `weaver.Run` was a bit too
 complicated. It was difficult to understand unless you were very familiar with
@@ -416,7 +416,7 @@ func (a *app) Main(ctx context.Context) {
 }
 ```
 
-<h2 id="14">June 21, 2023: <a href="https://github.com/ServiceWeaver/weaver/commit/a4a3f37f6ef443b853083e9627f7ec15ce5e3c9a">Remove Main Method</a></h2>
+<h2 id="14">June 21, 2023: <a href="https://github.com/thunur/weaver/commit/a4a3f37f6ef443b853083e9627f7ec15ce5e3c9a">Remove Main Method</a></h2>
 
 Service Weaver ships with a `weavertest` package that you can use to test a
 Service Weaver application. Here's how to test the `Todo` component, for

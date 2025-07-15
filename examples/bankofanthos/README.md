@@ -7,20 +7,20 @@ application.
 %%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
 graph TD
     %% Nodes.
-    github.com/ServiceWeaver/weaver/Main(weaver.Main)
-    github.com/ServiceWeaver/weaver/examples/bankofanthos/balancereader/T(balancereader.T)
-    github.com/ServiceWeaver/weaver/examples/bankofanthos/contacts/T(contacts.T)
-    github.com/ServiceWeaver/weaver/examples/bankofanthos/ledgerwriter/T(ledgerwriter.T)
-    github.com/ServiceWeaver/weaver/examples/bankofanthos/transactionhistory/T(transactionhistory.T)
-    github.com/ServiceWeaver/weaver/examples/bankofanthos/userservice/T(userservice.T)
+    github.com/thunur/weaver/Main(weaver.Main)
+    github.com/thunur/weaver/examples/bankofanthos/balancereader/T(balancereader.T)
+    github.com/thunur/weaver/examples/bankofanthos/contacts/T(contacts.T)
+    github.com/thunur/weaver/examples/bankofanthos/ledgerwriter/T(ledgerwriter.T)
+    github.com/thunur/weaver/examples/bankofanthos/transactionhistory/T(transactionhistory.T)
+    github.com/thunur/weaver/examples/bankofanthos/userservice/T(userservice.T)
 
     %% Edges.
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/bankofanthos/balancereader/T
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/bankofanthos/contacts/T
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/bankofanthos/ledgerwriter/T
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/bankofanthos/transactionhistory/T
-    github.com/ServiceWeaver/weaver/Main --> github.com/ServiceWeaver/weaver/examples/bankofanthos/userservice/T
-    github.com/ServiceWeaver/weaver/examples/bankofanthos/ledgerwriter/T --> github.com/ServiceWeaver/weaver/examples/bankofanthos/balancereader/T
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/bankofanthos/balancereader/T
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/bankofanthos/contacts/T
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/bankofanthos/ledgerwriter/T
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/bankofanthos/transactionhistory/T
+    github.com/thunur/weaver/Main --> github.com/thunur/weaver/examples/bankofanthos/userservice/T
+    github.com/thunur/weaver/examples/bankofanthos/ledgerwriter/T --> github.com/thunur/weaver/examples/bankofanthos/balancereader/T
 ```
 
 ## Running Locally

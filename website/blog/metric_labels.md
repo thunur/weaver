@@ -128,5 +128,5 @@ counters, gauges, and histograms) as well as other useful features.
 [metrics]: ../docs.html#metrics
 [otel_api]: https://pkg.go.dev/go.opentelemetry.io/otel/metric
 [prometheus_api]: https://pkg.go.dev/github.com/prometheus/client_golang/prometheus
-[weaver_api]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/metrics
+[weaver_api]: https://pkg.go.dev/github.com/thunur/weaver/metrics
 [what_are_metrics]: https://prometheus.io/docs/introduction/overview/#what-are-metrics

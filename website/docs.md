@@ -42,7 +42,7 @@ Ensure you have [Go installed][go_install], version 1.21 or higher. Then, run
 the following to install the `weaver` command:
 
 ```console
-$ go install github.com/ServiceWeaver/weaver/cmd/weaver@latest
+$ go install github.com/thunur/weaver/cmd/weaver@latest
 ```
 
 `go install` installs the `weaver` command to `$GOBIN`, which defaults to
@@ -72,8 +72,8 @@ USAGE
 `weaver kube` command (see the [GKE](#gke), [Kube](#kube) sections for details):
 
 ```console
-$ go install github.com/ServiceWeaver/weaver-gke/cmd/weaver-gke@latest
-$ go install github.com/ServiceWeaver/weaver-kube/cmd/weaver-kube@latest
+$ go install github.com/thunur/weaver-gke/cmd/weaver-gke@latest
+$ go install github.com/thunur/weaver-kube/cmd/weaver-kube@latest
 ```
 
 **Note**: If you run into issues installing `weaver`, `weaver gke` or `weaver kube`
@@ -81,7 +81,7 @@ commands on macOS, you may want to prefix the install command with
 `export CGO_ENABLED=1; export CC=gcc`.
 For example:
 ```console
-$ export CGO_ENABLED=1; export CC=gcc; go install github.com/ServiceWeaver/weaver/cmd/weaver@latest
+$ export CGO_ENABLED=1; export CC=gcc; go install github.com/thunur/weaver/cmd/weaver@latest
 ```
 
 # Step by Step Tutorial
@@ -118,7 +118,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/ServiceWeaver/weaver"
+    "github.com/thunur/weaver"
 )
 
 func main() {
@@ -184,7 +184,7 @@ package main
 import (
     "context"
 
-    "github.com/ServiceWeaver/weaver"
+    "github.com/thunur/weaver"
 )
 
 // Reverser component.
@@ -222,7 +222,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/ServiceWeaver/weaver"
+    "github.com/thunur/weaver"
 )
 
 func main() {
@@ -278,7 +278,7 @@ import (
     "log"
     "net/http"
 
-    "github.com/ServiceWeaver/weaver"
+    "github.com/thunur/weaver"
 )
 
 func main() {
@@ -1193,7 +1193,7 @@ import (
     "net/http"
 
     "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
-    "github.com/ServiceWeaver/weaver"
+    "github.com/thunur/weaver"
 )
 
 func main() {
@@ -1414,8 +1414,8 @@ import (
     "context"
     "testing"
 
-    "github.com/ServiceWeaver/weaver"
-    "github.com/ServiceWeaver/weaver/weavertest"
+    "github.com/thunur/weaver"
+    "github.com/thunur/weaver/weavertest"
 )
 
 func TestAdd(t *testing.T) {
@@ -2084,7 +2084,7 @@ First, [ensure you have Service Weaver installed](#installation). Next, install
 [Docker][docker] and [kubectl][kubectl]. Finally, install the `weaver-kube` command:
 
 ```console
-$ go install github.com/ServiceWeaver/weaver-kube/cmd/weaver-kube@latest
+$ go install github.com/thunur/weaver-kube/cmd/weaver-kube@latest
 ```
 
 **Note**: Make sure you've created a Kubernetes cluster before you attempt to
@@ -2146,7 +2146,7 @@ kube deployment information successfully generated
 "Hello, World!" application.
 
 ```yaml
-# Listener Service for group github.com/ServiceWeaver/weaver/Main
+# Listener Service for group github.com/thunur/weaver/Main
 apiVersion: v1
 kind: Service
 spec:
@@ -2154,25 +2154,25 @@ spec:
 ...
 
 ---
-# Deployment for group github.com/ServiceWeaver/weaver/Main
+# Deployment for group github.com/thunur/weaver/Main
 apiVersion: apps/v1
 kind: Deployment
 ...
 
 ---
-# Autoscaler for group github.com/ServiceWeaver/weaver/Main
+# Autoscaler for group github.com/thunur/weaver/Main
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 ...
 
 ---
-# Deployment for group github.com/ServiceWeaver/weaver/examples/hello/Reverser
+# Deployment for group github.com/thunur/weaver/examples/hello/Reverser
 apiVersion: apps/v1
 kind: Deployment
 ...
 
 ---
-# Autoscaler for group github.com/ServiceWeaver/weaver/examples/hello/Reverser
+# Autoscaler for group github.com/thunur/weaver/examples/hello/Reverser
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 ...
@@ -2319,7 +2319,7 @@ resourceSpec:
 groups:
   - name: reverser-group
     components:
-      -  github.com/ServiceWeaver/weaver/examples/hello/Reverser
+      -  github.com/thunur/weaver/examples/hello/Reverser
     resourceSpec:
       requests:
         memory: "256Mi"
@@ -2440,7 +2440,7 @@ First, [ensure you have Service Weaver installed](#installation). Next, install
 the `weaver-gke` command:
 
 ```console
-$ go install github.com/ServiceWeaver/weaver-gke/cmd/weaver-gke@latest
+$ go install github.com/thunur/weaver-gke/cmd/weaver-gke@latest
 ```
 
 Install the `gcloud` command to your local machine. To do so, follow [these
@@ -2969,7 +2969,7 @@ First, [ensure you have Service Weaver installed](#installation). Next, install
 the `weaver-gke-local` command:
 
 ```console
-$ go install github.com/ServiceWeaver/weaver-gke/cmd/weaver-gke-local@latest
+$ go install github.com/thunur/weaver-gke/cmd/weaver-gke-local@latest
 ```
 
 ### Getting Started
@@ -3632,7 +3632,7 @@ runtime benefits of microservices.
 [binary_unmarshaler]: https://pkg.go.dev/encoding#BinaryUnmarshaler
 [blue_green]: https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/bluegreen-deployments.html
 [canary]: https://sre.google/workbook/canarying-releases/
-[chat_example]: https://github.com/ServiceWeaver/weaver/tree/main/examples/chat/
+[chat_example]: https://github.com/thunur/weaver/tree/main/examples/chat/
 [chrome_tracing]: https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview
 [cloud_logging]: https://cloud.google.com/logging
 [cloud_metrics]: https://cloud.google.com/monitoring/api/metrics_gcp
@@ -3654,19 +3654,19 @@ runtime benefits of microservices.
 [go_generate]: https://pkg.go.dev/cmd/go/internal/generate
 [go_install]: https://go.dev/doc/install
 [go_interfaces]: https://go.dev/tour/methods/9
-[hello_app]: https://github.com/ServiceWeaver/weaver/tree/main/examples/hello
+[hello_app]: https://github.com/thunur/weaver/tree/main/examples/hello
 [hpa]: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
 [http_pprof]: https://pkg.go.dev/net/http/pprof
 [identifiers]: https://go.dev/ref/spec#Identifiers
 [isolation]: https://sre.google/workbook/canarying-releases/#dependencies-and-isolation
 [jaeger]: https://www.jaegertracing.io/
-[kube]: https://github.com/ServiceWeaver/weaver-kube
+[kube]: https://github.com/thunur/weaver-kube
 [kubectl]: https://kubernetes.io/docs/reference/kubectl/
 [kubernetes]: https://kubernetes.io/
-[kube_telemetry]: https://github.com/ServiceWeaver/weaver-kube/tree/main/examples/telemetry
-[kube_telemetry_api]: https://github.com/ServiceWeaver/weaver-kube/blob/main/tool/tool.go
-[kube_github_actions]: https://github.com/ServiceWeaver/weaver-kube/blob/main/.github/workflows/integration.yml
-[kube_config_file]: https://github.com/ServiceWeaver/weaver-kube/blob/main/internal/impl/config.go
+[kube_telemetry]: https://github.com/thunur/weaver-kube/tree/main/examples/telemetry
+[kube_telemetry_api]: https://github.com/thunur/weaver-kube/blob/main/tool/tool.go
+[kube_github_actions]: https://github.com/thunur/weaver-kube/blob/main/.github/workflows/integration.yml
+[kube_config_file]: https://github.com/thunur/weaver-kube/blob/main/internal/impl/config.go
 [kubernetes_resources]: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 [kubernetes_volumes]: https://kubernetes.io/docs/concepts/storage/volumes/
 [kubernetes_affinity]: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
@@ -3689,13 +3689,13 @@ runtime benefits of microservices.
 [prometheus_histogram]: https://prometheus.io/docs/concepts/metric_types/#histogram
 [prometheus_naming]: https://prometheus.io/docs/practices/naming/
 [sql_package]: https://pkg.go.dev/database/sql
-[ssh]: https://github.com/ServiceWeaver/weaver/tree/main/internal/tool/ssh
+[ssh]: https://github.com/thunur/weaver/tree/main/internal/tool/ssh
 [slog_levels]: https://pkg.go.dev/log/slog#Level
 [trace_service]: https://cloud.google.com/trace
 [update_failures_paper]: https://scholar.google.com/scholar?cluster=4116586908204898847
 [weak_consistency]: https://mwhittaker.github.io/consistency_in_distributed_systems/1_baseball.html
-[weaver_examples]: https://github.com/ServiceWeaver/weaver/tree/main/examples
-[weaver_github]: https://github.com/ServiceWeaver/weaver
-[weavertest.Fake]: https://pkg.go.dev/github.com/ServiceWeaver/weaver/weavertest#Fake
+[weaver_examples]: https://github.com/thunur/weaver/tree/main/examples
+[weaver_github]: https://github.com/thunur/weaver
+[weavertest.Fake]: https://pkg.go.dev/github.com/thunur/weaver/weavertest#Fake
 [workshop]: https://github.com/serviceweaver/workshops
 [xdg]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
