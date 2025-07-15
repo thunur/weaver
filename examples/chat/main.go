@@ -25,7 +25,7 @@ import (
 //go:generate ../../cmd/weaver/weaver generate
 
 func main() {
-	flag.Parse()
+	flag.Parse()	
 	if err := weaver.Run(context.Background(), serve); err != nil {
 		log.Fatal(err)
 	}
