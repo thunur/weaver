@@ -23,11 +23,11 @@ import (
 	"os"
 	"sync"
 
-	"github.com/ServiceWeaver/weaver/runtime"
-	"github.com/ServiceWeaver/weaver/runtime/colors"
-	"github.com/ServiceWeaver/weaver/runtime/envelope"
-	"github.com/ServiceWeaver/weaver/runtime/logging"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/runtime"
+	"github.com/thunur/weaver/runtime/colors"
+	"github.com/thunur/weaver/runtime/envelope"
+	"github.com/thunur/weaver/runtime/logging"
+	"github.com/thunur/weaver/runtime/protos"
 	"github.com/google/uuid"
 )
 

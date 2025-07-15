@@ -22,7 +22,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 //go:generate ../../cmd/weaver/weaver generate

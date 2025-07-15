@@ -28,7 +28,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 // struct with local implementation of the (Un)marshalBinary interface.

@@ -17,8 +17,8 @@ package ssh
 import (
 	"context"
 
-	"github.com/ServiceWeaver/weaver/internal/tool/ssh/impl"
-	"github.com/ServiceWeaver/weaver/runtime/tool"
+	"github.com/thunur/weaver/internal/tool/ssh/impl"
+	"github.com/thunur/weaver/runtime/tool"
 )
 
 var babysitterCmd = tool.Command{

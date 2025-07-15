@@ -19,7 +19,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver/weavertest"
+	"github.com/thunur/weaver/weavertest"
 )
 
 //go:generate ../../../cmd/weaver/weaver generate ./...

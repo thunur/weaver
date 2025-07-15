@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

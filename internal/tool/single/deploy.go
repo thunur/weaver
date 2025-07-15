@@ -24,14 +24,14 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/ServiceWeaver/weaver/internal/tool/config"
-	"github.com/ServiceWeaver/weaver/runtime"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
-	"github.com/ServiceWeaver/weaver/runtime/tool"
+	"github.com/thunur/weaver/internal/tool/config"
+	"github.com/thunur/weaver/runtime"
+	"github.com/thunur/weaver/runtime/codegen"
+	"github.com/thunur/weaver/runtime/tool"
 )
 
 const (
-	ConfigKey      = "github.com/ServiceWeaver/weaver/single"
+	ConfigKey      = "github.com/thunur/weaver/single"
 	ShortConfigKey = "single"
 )
 

@@ -26,10 +26,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ServiceWeaver/weaver/internal/traceio"
-	"github.com/ServiceWeaver/weaver/metadata"
-	"github.com/ServiceWeaver/weaver/weavertest"
-	"github.com/ServiceWeaver/weaver/weavertest/internal/simple"
+	"github.com/thunur/weaver/internal/traceio"
+	"github.com/thunur/weaver/metadata"
+	"github.com/thunur/weaver/weavertest"
+	"github.com/thunur/weaver/weavertest/internal/simple"
 	"github.com/google/uuid"
 )
 
@@ -147,8 +147,8 @@ func TestTwoComponents(t *testing.T) {
 		[serviceweaver]
 		colocate = [
 		  [
-		    "github.com/ServiceWeaver/weaver/weavertest/internal/simple/Source",
-		    "github.com/ServiceWeaver/weaver/weavertest/internal/simple/Destination",
+		    "github.com/thunur/weaver/weavertest/internal/simple/Source",
+		    "github.com/thunur/weaver/weavertest/internal/simple/Destination",
 		  ]
 	]`
 

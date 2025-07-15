@@ -20,8 +20,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver/runtime"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
+	"github.com/thunur/weaver/runtime"
+	"github.com/thunur/weaver/runtime/codegen"
 	"github.com/google/go-cmp/cmp"
 )
 
@@ -131,7 +131,7 @@ colocate = [["a", "main", "a"]]
 [serviceweaver]
 name = "foo"
 
-["github.com/ServiceWeaver/weaver"]
+["github.com/thunur/weaver"]
 binary = "/tmp/foo"
 `,
 			expectedError: "conflicting",

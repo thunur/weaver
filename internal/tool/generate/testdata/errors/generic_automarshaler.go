@@ -15,7 +15,7 @@
 // ERROR: cannot embed weaver.AutoMarshal
 package foo
 
-import "github.com/ServiceWeaver/weaver"
+import "github.com/thunur/weaver"
 
 type option[T any] struct {
 	x int

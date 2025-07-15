@@ -24,10 +24,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ServiceWeaver/weaver/runtime/colors"
-	"github.com/ServiceWeaver/weaver/runtime/logging"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
-	dtool "github.com/ServiceWeaver/weaver/runtime/tool"
+	"github.com/thunur/weaver/runtime/colors"
+	"github.com/thunur/weaver/runtime/logging"
+	"github.com/thunur/weaver/runtime/protos"
+	dtool "github.com/thunur/weaver/runtime/tool"
 	"golang.org/x/exp/maps"
 )
 

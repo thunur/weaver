@@ -17,7 +17,7 @@ package weaver
 import (
 	"os"
 
-	"github.com/ServiceWeaver/weaver/internal/traceio"
+	"github.com/thunur/weaver/internal/traceio"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/resource"
@@ -37,7 +37,7 @@ import (
 //
 // [1] https://github.com/open-telemetry/opentelemetry-go/blob/v1.20.0/semconv/v1.7.0/resource.go#L813
 func tracer(exporter sdktrace.SpanExporter, app, deploymentId, weaveletId string) trace.Tracer {
-	const instrumentationLibrary = "github.com/ServiceWeaver/weaver/serviceweaver"
+	const instrumentationLibrary = "github.com/thunur/weaver/serviceweaver"
 	const instrumentationVersion = "0.0.1"
 	tracerProvider := sdktrace.NewTracerProvider(
 		sdktrace.WithBatcher(exporter),

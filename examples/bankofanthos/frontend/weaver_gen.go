@@ -5,15 +5,15 @@ package frontend
 
 import (
 	"context"
-	"github.com/ServiceWeaver/weaver"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
+	"github.com/thunur/weaver"
+	"github.com/thunur/weaver/runtime/codegen"
 	"go.opentelemetry.io/otel/trace"
 	"reflect"
 )
 
 func init() {
 	codegen.Register(codegen.Registration{
-		Name:      "github.com/ServiceWeaver/weaver/Main",
+		Name:      "github.com/thunur/weaver/Main",
 		Iface:     reflect.TypeOf((*weaver.Main)(nil)).Elem(),
 		Impl:      reflect.TypeOf(server{}),
 		Listeners: []string{"bank"},
@@ -27,7 +27,7 @@ func init() {
 		ReflectStubFn: func(caller func(string, context.Context, []any, []any) error) any {
 			return main_reflect_stub{caller: caller}
 		},
-		RefData: "⟦583f439b:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/ServiceWeaver/weaver/examples/bankofanthos/balancereader/T⟧\n⟦01efa328:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/ServiceWeaver/weaver/examples/bankofanthos/contacts/T⟧\n⟦285db949:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/ServiceWeaver/weaver/examples/bankofanthos/ledgerwriter/T⟧\n⟦c236fa3b:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/ServiceWeaver/weaver/examples/bankofanthos/transactionhistory/T⟧\n⟦0906345d:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/ServiceWeaver/weaver/examples/bankofanthos/userservice/T⟧\n⟦969790bc:wEaVeRlIsTeNeRs:github.com/ServiceWeaver/weaver/Main→bank⟧\n",
+		RefData: "⟦583f439b:wEaVeReDgE:github.com/thunur/weaver/Main→github.com/thunur/weaver/examples/bankofanthos/balancereader/T⟧\n⟦01efa328:wEaVeReDgE:github.com/thunur/weaver/Main→github.com/thunur/weaver/examples/bankofanthos/contacts/T⟧\n⟦285db949:wEaVeReDgE:github.com/thunur/weaver/Main→github.com/thunur/weaver/examples/bankofanthos/ledgerwriter/T⟧\n⟦c236fa3b:wEaVeReDgE:github.com/thunur/weaver/Main→github.com/thunur/weaver/examples/bankofanthos/transactionhistory/T⟧\n⟦0906345d:wEaVeReDgE:github.com/thunur/weaver/Main→github.com/thunur/weaver/examples/bankofanthos/userservice/T⟧\n⟦969790bc:wEaVeRlIsTeNeRs:github.com/thunur/weaver/Main→bank⟧\n",
 	})
 }
 
@@ -63,19 +63,19 @@ var _ codegen.LatestVersion = codegen.Version[[0][24]struct{}](`
 
 ERROR: You generated this file with 'weaver generate' (devel) (codegen
 version v0.24.0). The generated code is incompatible with the version of the
-github.com/ServiceWeaver/weaver module that you're using. The weaver module
+github.com/thunur/weaver module that you're using. The weaver module
 version can be found in your go.mod file or by running the following command.
 
-    go list -m github.com/ServiceWeaver/weaver
+    go list -m github.com/thunur/weaver
 
 We recommend updating the weaver module and the 'weaver generate' command by
 running the following.
 
-    go get github.com/ServiceWeaver/weaver@latest
-    go install github.com/ServiceWeaver/weaver/cmd/weaver@latest
+    go get github.com/thunur/weaver@latest
+    go install github.com/thunur/weaver/cmd/weaver@latest
 
 Then, re-run 'weaver generate' and re-build your code. If the problem persists,
-please file an issue at https://github.com/ServiceWeaver/weaver/issues.
+please file an issue at https://github.com/thunur/weaver/issues.
 
 `)
 

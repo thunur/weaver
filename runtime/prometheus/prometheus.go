@@ -22,9 +22,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ServiceWeaver/weaver/runtime/logging"
-	"github.com/ServiceWeaver/weaver/runtime/metrics"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/runtime/logging"
+	"github.com/thunur/weaver/runtime/metrics"
+	"github.com/thunur/weaver/runtime/protos"
 	"golang.org/x/exp/maps"
 )
 

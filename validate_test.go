@@ -19,8 +19,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver/internal/reflection"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
+	"github.com/thunur/weaver/internal/reflection"
+	"github.com/thunur/weaver/runtime/codegen"
 )
 
 // TestValidateNoRegistrations tests that validateRegistrations succeeds on an

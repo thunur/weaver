@@ -20,7 +20,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 //go:generate ../../cmd/weaver/weaver generate

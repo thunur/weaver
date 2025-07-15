@@ -19,10 +19,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ServiceWeaver/weaver/internal/control"
-	"github.com/ServiceWeaver/weaver/runtime/colors"
-	"github.com/ServiceWeaver/weaver/runtime/logging"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/internal/control"
+	"github.com/thunur/weaver/runtime/colors"
+	"github.com/thunur/weaver/runtime/logging"
+	"github.com/thunur/weaver/runtime/protos"
 )
 
 // deployerControl is a component hosted in every deployer. Weavelets make calls to this

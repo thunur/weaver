@@ -21,7 +21,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/runtime/protos"
 )
 
 // getProfile collects a profile of this process.

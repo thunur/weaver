@@ -18,7 +18,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver/weavertest"
+	"github.com/thunur/weaver/weavertest"
 )
 
 func TestOneComponentImpl(t *testing.T) {

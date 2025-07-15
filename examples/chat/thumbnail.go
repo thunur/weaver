@@ -22,7 +22,7 @@ import (
 	"math"
 
 	"golang.org/x/image/draw"
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 type ImageScaler interface {

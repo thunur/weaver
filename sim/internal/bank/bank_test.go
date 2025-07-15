@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ServiceWeaver/weaver"
-	"github.com/ServiceWeaver/weaver/sim"
-	"github.com/ServiceWeaver/weaver/sim/internal/bank"
+	"github.com/thunur/weaver"
+	"github.com/thunur/weaver/sim"
+	"github.com/thunur/weaver/sim/internal/bank"
 )
 
 // fakestore is a fake implementation of the Store component that uses an

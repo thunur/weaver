@@ -29,7 +29,7 @@ import (
 	sub1 "foo/sub1"
 	sub2 "foo/sub2"
 
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 type foo interface {

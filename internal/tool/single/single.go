@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/ServiceWeaver/weaver/internal/must"
-	"github.com/ServiceWeaver/weaver/internal/status"
-	itool "github.com/ServiceWeaver/weaver/internal/tool"
-	"github.com/ServiceWeaver/weaver/runtime"
-	"github.com/ServiceWeaver/weaver/runtime/tool"
+	"github.com/thunur/weaver/internal/must"
+	"github.com/thunur/weaver/internal/status"
+	itool "github.com/thunur/weaver/internal/tool"
+	"github.com/thunur/weaver/runtime"
+	"github.com/thunur/weaver/runtime/tool"
 )
 
 var (

@@ -19,7 +19,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 func main() {

@@ -18,7 +18,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/runtime/protos"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 )

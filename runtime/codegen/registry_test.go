@@ -20,9 +20,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver"
-	"github.com/ServiceWeaver/weaver/internal/reflection"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
+	"github.com/thunur/weaver"
+	"github.com/thunur/weaver/internal/reflection"
+	"github.com/thunur/weaver/runtime/codegen"
 	"go.opentelemetry.io/otel/trace"
 )
 

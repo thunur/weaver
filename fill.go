@@ -20,8 +20,8 @@ import (
 	"net"
 	"reflect"
 
-	"github.com/ServiceWeaver/weaver/internal/reflection"
-	"github.com/ServiceWeaver/weaver/internal/weaver"
+	"github.com/thunur/weaver/internal/reflection"
+	"github.com/thunur/weaver/internal/weaver"
 )
 
 func init() {

@@ -23,13 +23,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ServiceWeaver/weaver/internal/proto"
-	"github.com/ServiceWeaver/weaver/runtime/envelope"
-	"github.com/ServiceWeaver/weaver/runtime/logging"
-	"github.com/ServiceWeaver/weaver/runtime/metrics"
-	"github.com/ServiceWeaver/weaver/runtime/protomsg"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
-	"github.com/ServiceWeaver/weaver/runtime/retry"
+	"github.com/thunur/weaver/internal/proto"
+	"github.com/thunur/weaver/runtime/envelope"
+	"github.com/thunur/weaver/runtime/logging"
+	"github.com/thunur/weaver/runtime/metrics"
+	"github.com/thunur/weaver/runtime/protomsg"
+	"github.com/thunur/weaver/runtime/protos"
+	"github.com/thunur/weaver/runtime/retry"
 	"github.com/google/uuid"
 )
 

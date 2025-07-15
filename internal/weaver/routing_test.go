@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ServiceWeaver/weaver/internal/net/call"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/internal/net/call"
+	"github.com/thunur/weaver/runtime/protos"
 	"github.com/google/go-cmp/cmp"
 )
 

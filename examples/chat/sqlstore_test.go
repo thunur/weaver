@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ServiceWeaver/weaver/weavertest"
 	"github.com/google/go-cmp/cmp"
 	"github.com/testcontainers/testcontainers-go"
 	"github.com/testcontainers/testcontainers-go/modules/mysql"
+	"github.com/thunur/weaver/weavertest"
 )
 
 // newMySQL launches a new, fully initialized MySQL instance suitable for use
@@ -68,7 +68,7 @@ func TestFeed(t *testing.T) {
 	// Run the test against the instance.
 	runner := weavertest.Local
 	runner.Config = fmt.Sprintf(`
-		["github.com/ServiceWeaver/weaver/examples/chat/SQLStore"]
+		["github.com/thunur/weaver/examples/chat/SQLStore"]
 		db_driver = "mysql"
 		db_uri = %q
 	`, addr)
@@ -134,7 +134,7 @@ func TestImage(t *testing.T) {
 	// Run the test against the instance.
 	runner := weavertest.Local
 	runner.Config = fmt.Sprintf(`
-		["github.com/ServiceWeaver/weaver/examples/chat/SQLStore"]
+		["github.com/thunur/weaver/examples/chat/SQLStore"]
 		db_driver = "mysql"
 		db_uri = %q
 	`, addr)

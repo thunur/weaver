@@ -17,7 +17,7 @@
 package foo
 
 import (
-	"github.com/ServiceWeaver/weaver"
+	"github.com/thunur/weaver"
 )
 
 type foo interface {

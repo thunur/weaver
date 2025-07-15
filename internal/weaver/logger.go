@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ServiceWeaver/weaver/runtime/logging"
-	"github.com/ServiceWeaver/weaver/runtime/protos"
+	"github.com/thunur/weaver/runtime/logging"
+	"github.com/thunur/weaver/runtime/protos"
 )
 
 // remoteLogger collects log entries into batches and sends these batches to a

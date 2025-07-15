@@ -20,8 +20,8 @@ import (
 	"reflect"
 	"unicode"
 
-	"github.com/ServiceWeaver/weaver/internal/reflection"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
+	"github.com/thunur/weaver/internal/reflection"
+	"github.com/thunur/weaver/runtime/codegen"
 	"golang.org/x/exp/slices"
 )
 

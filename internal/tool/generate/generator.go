@@ -34,11 +34,11 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/ServiceWeaver/weaver/internal/files"
-	"github.com/ServiceWeaver/weaver/internal/tool"
-	"github.com/ServiceWeaver/weaver/runtime/codegen"
-	"github.com/ServiceWeaver/weaver/runtime/colors"
-	"github.com/ServiceWeaver/weaver/runtime/version"
+	"github.com/thunur/weaver/internal/files"
+	"github.com/thunur/weaver/internal/tool"
+	"github.com/thunur/weaver/runtime/codegen"
+	"github.com/thunur/weaver/runtime/colors"
+	"github.com/thunur/weaver/runtime/version"
 	"golang.org/x/exp/maps"
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/types/typeutil"
@@ -1055,19 +1055,19 @@ func (g *generator) generateVersionCheck(p printFn) error {
 
 ERROR: You generated this file with 'weaver generate' %s (codegen
 version %s). The generated code is incompatible with the version of the
-github.com/ServiceWeaver/weaver module that you're using. The weaver module
+github.com/thunur/weaver module that you're using. The weaver module
 version can be found in your go.mod file or by running the following command.
 
-    go list -m github.com/ServiceWeaver/weaver
+    go list -m github.com/thunur/weaver
 
 We recommend updating the weaver module and the 'weaver generate' command by
 running the following.
 
-    go get github.com/ServiceWeaver/weaver@latest
-    go install github.com/ServiceWeaver/weaver/cmd/weaver@latest
+    go get github.com/thunur/weaver@latest
+    go install github.com/thunur/weaver/cmd/weaver@latest
 
 Then, re-run 'weaver generate' and re-build your code. If the problem persists,
-please file an issue at https://github.com/ServiceWeaver/weaver/issues.
+please file an issue at https://github.com/thunur/weaver/issues.
 
 `+"`", selfVersion, version.CodegenVersion),
 	)

@@ -16,7 +16,7 @@
 
 package foo
 
-import "github.com/ServiceWeaver/weaver"
+import "github.com/thunur/weaver"
 
 type A struct {
 	weaver.AutoMarshal

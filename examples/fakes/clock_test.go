@@ -18,7 +18,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ServiceWeaver/weaver/weavertest"
+	"github.com/thunur/weaver/weavertest"
 )
 
 // fakeClock is a fake implementation of the Clock component that always

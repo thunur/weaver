@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ServiceWeaver/weaver/sim"
+	"github.com/thunur/weaver/sim"
 )
 
 func even(x int) bool {
