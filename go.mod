@@ -1,4 +1,4 @@
-module github.com/ServiceWeaver/weaver
+module github.com/thunur/weaver
 
 go 1.23.0
 
