@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/google/cel-go/cel"
 	"github.com/thunur/weaver/runtime/protos"
-	"github.com/google/cel-go/parser"
 )
 
 func TestValidQueries(t *testing.T) {
@@ -152,7 +152,7 @@ func TestRewrite(t *testing.T) {
 			if issues != nil && issues.Err() != nil {
 				t.Fatal(issues.Err())
 			}
-			got, err := parser.Unparse(ast.Expr(), ast.SourceInfo())
+			got, err := cel.AstToString(ast)
 			if err != nil {
 				t.Fatal(err)
 			}
